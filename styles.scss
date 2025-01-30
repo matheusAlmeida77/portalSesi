@@ -71,7 +71,7 @@ header {
   font-style: normal;
 }
 
-@import './pages/home/_home.scss';
-@import './pages/home/slider';
-@import './pages/sheduling/_sheduling.scss'
+@import './pages/home/home';
+@import './pages/home/carousel';
+@import './pages/scheduling/scheduling'
 

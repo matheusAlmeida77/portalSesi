@@ -2,46 +2,38 @@
     background-color: white;
 }
 
-#navLeft{
+.navLeft{
+    cursor: pointer;
     background-color: #760101;
     width: 150px;
+    left: -125px;
     height: 300px;
     border-radius: 0 30px 30px 0;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     padding: 20px;
     gap: 20px;
+    transition: 0.5s;
     
     a {
         all: unset;
         font-family: "Inter";
         font-size: 15px;
         font-weight: 400;
+        visibility: hidden;
         color: white;
         cursor: pointer;
     }
-
-
-
-
     position: absolute;
     top: 25vh;
-    // right: 99%;
 }
 
-.animationNavLeft {
-    animation: navLeftAnimation 1.5s ease;
-}
+.navLeftShow{
+    left: 0;
 
-@keyframes navLeftAnimation {
-    from {
-        right: 99%;
-    }
-
-    to {
-        right: 90.3%;
+    a{
+        visibility: visible;
     }
 }

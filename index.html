@@ -1,63 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-    <script src="slider.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="pages/home/navLeft.js" defer></script>
+    <!-- Splide -->
+    <script src="path-to-the-file/splide.min.js" defer></script>
+    <script
+      src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"
+      defer
+    ></script>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+"
+      rel="stylesheet"
+    />
+    <script src="pages/home/carousel.js"></script>
     <title>Menu Inicial</title>
-</head>
+  </head>
 
-<body id="bodyHome">
-    <div id="navLeft" class="animationNavLeft">
-        <a href="">MURAL</a>
-        <a href="">CALENDÁRIO</a>
-        <a href="">NOTA 1000</a>
-        <a href="">MEU PERFIL</a>
+  <body id="bodyHome">
+    <div class="navLeft navLeftShow">
+      <a href="">MURAL</a>
+      <a href="">CALENDÁRIO</a>
+      <a href="">NOTA 1000</a>
+      <a href="">PERFIL</a>
     </div>
 
     <header>
-        <div id="logo">
-            <img src="./src/Logo Sesi.png" alt="Logo Do Sesi" width="113px">
-        </div>
+      <div id="logo">
+        <img src="./src/Logo Sesi.png" alt="Logo Do Sesi" width="113px" />
+      </div>
 
-        <nav id="navBar">
-            <a>HOME</a>
-            <a>TAREFAS</a>
-            <a>EVENTOS</a>
-            <a>BIBLIOTECA</a>
-            <a>FÓRUM</a>
-            <a>PODCAST</a>
-            <a>CARDÁPIO</a>
-        </nav>
+      <nav id="navBar">
+        <a>HOME</a>
+        <a>TAREFAS</a>
+        <a>EVENTOS</a>
+        <a>BIBLIOTECA</a>
+        <a>FÓRUM</a>
+        <a>PODCAST</a>
+        <a>CARDÁPIO</a>
+      </nav>
 
-        <div class="search">
-            <input type="text" class="search-input" placeholder="">
-            <button class="search-button">
-                <i id="search-icon" class="bi bi-search" style="color: white;"></i>
-            </button>
-        </div>
+      <div class="search">
+        <input type="text" class="search-input" placeholder="" />
+        <button class="search-button">
+          <i id="search-icon" class="bi bi-search" style="color: white"></i>
+        </button>
+      </div>
     </header>
-    <!-- Swiper Slider -->
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    </div>
-</body>
-
+    <!-- Carousel -->
+    <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <button class="splide__slide">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/fc30/a5dd/dbe5e4efb50ab3ef44c17529ae76eeda?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YppKQGemJl1ltoEbEq78JEXNA9VrW4EAUTKC4vuZHK3HlgyaJ7ceELVN~KG7lh~msBJoNRmf2nDE0I6FsEGTnWGhAt6KXPtQW0UQlljb877E3RBjBo5h5WPt1mPzcC99LWu4Lp82zCwcCArbpFP5JsUwMaKXaDnilxYBCuTzAMHUBtb9TVvZcn0vF3ycsMBiK7CD08STwXJXZrChXf9mqd7-cTyFZeRYoStocc~~7TiPlnHy9bxlkCG6ymBYZXxLXC90LGUHWBKDPQJ1w31t~ZTOU7Shc88vZ78gG0WBsJs4YfCn~jXF5SpSN~SVOGW0xkSyXkcxJBpaVobZisCybQ__"
+              alt=""
+            />
+          </button>
+          <li class="splide__slide">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/fc30/a5dd/dbe5e4efb50ab3ef44c17529ae76eeda?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YppKQGemJl1ltoEbEq78JEXNA9VrW4EAUTKC4vuZHK3HlgyaJ7ceELVN~KG7lh~msBJoNRmf2nDE0I6FsEGTnWGhAt6KXPtQW0UQlljb877E3RBjBo5h5WPt1mPzcC99LWu4Lp82zCwcCArbpFP5JsUwMaKXaDnilxYBCuTzAMHUBtb9TVvZcn0vF3ycsMBiK7CD08STwXJXZrChXf9mqd7-cTyFZeRYoStocc~~7TiPlnHy9bxlkCG6ymBYZXxLXC90LGUHWBKDPQJ1w31t~ZTOU7Shc88vZ78gG0WBsJs4YfCn~jXF5SpSN~SVOGW0xkSyXkcxJBpaVobZisCybQ__"
+              alt=""
+            />
+          </li>
+          <li class="splide__slide">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/fc30/a5dd/dbe5e4efb50ab3ef44c17529ae76eeda?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YppKQGemJl1ltoEbEq78JEXNA9VrW4EAUTKC4vuZHK3HlgyaJ7ceELVN~KG7lh~msBJoNRmf2nDE0I6FsEGTnWGhAt6KXPtQW0UQlljb877E3RBjBo5h5WPt1mPzcC99LWu4Lp82zCwcCArbpFP5JsUwMaKXaDnilxYBCuTzAMHUBtb9TVvZcn0vF3ycsMBiK7CD08STwXJXZrChXf9mqd7-cTyFZeRYoStocc~~7TiPlnHy9bxlkCG6ymBYZXxLXC90LGUHWBKDPQJ1w31t~ZTOU7Shc88vZ78gG0WBsJs4YfCn~jXF5SpSN~SVOGW0xkSyXkcxJBpaVobZisCybQ__"
+              alt=""
+            />
+          </li>
+          <li class="splide__slide">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/fc30/a5dd/dbe5e4efb50ab3ef44c17529ae76eeda?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YppKQGemJl1ltoEbEq78JEXNA9VrW4EAUTKC4vuZHK3HlgyaJ7ceELVN~KG7lh~msBJoNRmf2nDE0I6FsEGTnWGhAt6KXPtQW0UQlljb877E3RBjBo5h5WPt1mPzcC99LWu4Lp82zCwcCArbpFP5JsUwMaKXaDnilxYBCuTzAMHUBtb9TVvZcn0vF3ycsMBiK7CD08STwXJXZrChXf9mqd7-cTyFZeRYoStocc~~7TiPlnHy9bxlkCG6ymBYZXxLXC90LGUHWBKDPQJ1w31t~ZTOU7Shc88vZ78gG0WBsJs4YfCn~jXF5SpSN~SVOGW0xkSyXkcxJBpaVobZisCybQ__"
+              alt=""
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
 </html>

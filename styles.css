@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 * {
@@ -71,9 +72,11 @@ header {
   background-color: white;
 }
 
-#navLeft {
+.navLeft {
+  cursor: pointer;
   background-color: #760101;
   width: 150px;
+  left: -125px;
   height: 300px;
   border-radius: 0 30px 30px 0;
   display: flex;
@@ -82,48 +85,52 @@ header {
   justify-content: center;
   padding: 20px;
   gap: 20px;
+  transition: 0.5s;
   position: absolute;
   top: 25vh;
 }
-#navLeft a {
+.navLeft a {
   all: unset;
   font-family: "Inter";
   font-size: 15px;
   font-weight: 400;
+  visibility: hidden;
   color: white;
   cursor: pointer;
 }
 
-.animationNavLeft {
-  animation: navLeftAnimation 1.5s ease;
+.navLeftShow {
+  left: 0;
+}
+.navLeftShow a {
+  visibility: visible;
 }
 
-@keyframes navLeftAnimation {
-  from {
-    right: 99%;
-  }
-  to {
-    right: 90.3%;
-  }
+#image-carousel {
+  width: 75%;
+  height: 300px;
+  margin: 2rem auto;
+  overflow: hidden;
 }
-.swiper {
-  width: 100%;
+
+.splide__track {
   height: 100%;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+.splide__slide {
+  background: none;
+  cursor: pointer;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.splide__slide img {
+  width: 100%; /* Ocupa toda a largura do slide */
+  height: 100%; /* Ocupa toda a altura do slide */
+  -o-object-fit: contain;
+     object-fit: contain; /* Garante que a imagem inteira fique visível sem cortar */
+  max-height: 100%; /* Evita que a imagem ultrapasse a altura do carousel */
 }/*# sourceMappingURL=styles.css.map */
