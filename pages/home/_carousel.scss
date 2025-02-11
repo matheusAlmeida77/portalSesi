@@ -20,10 +20,10 @@
 }
 
 .splide__slide img {
-  width: 100%; /* Ocupa toda a largura do slide */
-  height: 100%; /* Ocupa toda a altura do slide */
-  object-fit: contain; /* Garante que a imagem inteira fique visível sem cortar */
-  max-height: 100%; /* Evita que a imagem ultrapasse a altura do carousel */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 100%; 
 }
 
 @media (max-width: 321px) {

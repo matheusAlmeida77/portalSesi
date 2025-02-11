@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 * {
@@ -44,7 +43,7 @@ header {
 
 .search {
   position: relative;
-  width: 150px; /* Ajuste conforme necessário */
+  width: 150px;
 }
 
 .search-input {
@@ -53,7 +52,7 @@ header {
   background-color: rgba(244, 242, 242, 0.3137254902);
   border: none;
   color: white;
-  padding: 10px 40px 10px 16px; /* Espaço para a lupa */
+  padding: 10px 40px 10px 16px;
   border-radius: 30px;
   width: 100%;
   height: 24px;
@@ -101,7 +100,7 @@ header {
     padding-left: 25px;
   }
   #iconMenu {
-    display: flex !important;
+    display: flex;
     justify-content: center;
     width: 30%;
     font-size: 30px;
@@ -126,7 +125,6 @@ header {
   cursor: pointer;
   background-color: #760101;
   width: 150px;
-  left: -125px;
   height: 300px;
   border-radius: 0 30px 30px 0;
   display: flex;
@@ -138,6 +136,7 @@ header {
   transition: 0.5s;
   position: absolute;
   top: 25vh;
+  left: -125px;
 }
 .navLeft a {
   all: unset;
@@ -155,6 +154,20 @@ header {
   visibility: visible;
 }
 
+@media (max-width: 768px) {
+  .navLeft {
+    width: 80%;
+    height: 100px;
+    border-radius: 30px 30px 0 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
 #sectionCards {
   display: flex;
   width: 100%;
@@ -238,9 +251,9 @@ header {
   #ContainerAlunos,
   #ContainerEsportes,
   #ContainerBiblio {
-    background-size: cover; /* Garante que ocupe toda a div */
-    background-position: center center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 #image-carousel {
@@ -265,11 +278,11 @@ header {
 }
 
 .splide__slide img {
-  width: 100%; /* Ocupa toda a largura do slide */
-  height: 100%; /* Ocupa toda a altura do slide */
+  width: 100%;
+  height: 100%;
   -o-object-fit: contain;
-     object-fit: contain; /* Garante que a imagem inteira fique visível sem cortar */
-  max-height: 100%; /* Evita que a imagem ultrapasse a altura do carousel */
+     object-fit: contain;
+  max-height: 100%;
 }
 
 @media (max-width: 321px) {
