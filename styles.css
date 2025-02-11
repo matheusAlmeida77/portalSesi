@@ -21,6 +21,14 @@ header {
   padding: 0 50px;
 }
 
+#iconMenu {
+  display: none;
+}
+
+#logo img {
+  width: 113px;
+}
+
 #navBar {
   width: 50%;
   display: flex;
@@ -35,10 +43,8 @@ header {
 }
 
 .search {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
+  position: relative;
+  width: 150px; /* Ajuste conforme necessário */
 }
 
 .search-input {
@@ -47,20 +53,64 @@ header {
   background-color: rgba(244, 242, 242, 0.3137254902);
   border: none;
   color: white;
-  padding: 0.7rem 1rem;
-  padding-right: 2rem;
+  padding: 10px 40px 10px 16px; /* Espaço para a lupa */
   border-radius: 30px;
-  width: 7.625rem;
-  height: 1.5rem;
+  width: 100%;
+  height: 24px;
   transition: all ease-in-out 0.5s;
-  margin-right: -1.5rem;
 }
 
 .search-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
+#search-icon {
+  color: white;
+  font-size: 15px;
+}
+
+@media (max-width: 1200px) {
+  #navBar {
+    width: 60%;
+  }
+}
+@media (max-width: 980px) {
+  #navBar {
+    width: 65%;
+  }
+  header {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 870px) {
+  header {
+    justify-content: space-evenly;
+    padding: 15px;
+  }
+  #navBar {
+    display: none;
+  }
+  .search {
+    width: 30%;
+    padding-left: 25px;
+  }
+  #iconMenu {
+    display: flex !important;
+    justify-content: center;
+    width: 30%;
+    font-size: 30px;
+    color: white;
+  }
+  #logo img {
+    width: 100%;
+  }
+}
 .inter {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
@@ -94,7 +144,6 @@ header {
   font-family: "Inter";
   font-size: 15px;
   font-weight: 400;
-  visibility: hidden;
   color: white;
   cursor: pointer;
 }
@@ -106,10 +155,98 @@ header {
   visibility: visible;
 }
 
+#sectionCards {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.CardHome {
+  margin: 46px 70px;
+  width: 35%;
+  height: 150px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+.backColorRed {
+  background-color: rgba(118, 1, 1, 0.4392156863);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ContainerCardapio {
+  background: url("../../src/merendeiras.png");
+  background-size: cover;
+}
+
+#ContainerAlunos {
+  background: url("../../src/alunos.jpg");
+  background-size: cover;
+}
+
+#ContainerEsportes {
+  background: url("../../src/esportes.jpg");
+  background-size: cover;
+}
+
+#ContainerBiblio {
+  background: url("../../src/biblioteca.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 934px) {
+  .CardHome {
+    margin: 46px 40px;
+  }
+}
+@media (max-width: 861px) {
+  .CardHome {
+    margin: 36px 20px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 667px) {
+  .CardHome {
+    margin: 26px 15px;
+    font-size: 20px;
+    width: 40%;
+  }
+}
+@media (max-width: 434px) {
+  .CardHome {
+    font-size: 16px;
+  }
+}
+@media (max-width: 321px) {
+  .CardHome {
+    font-size: 13px;
+  }
+  #ContainerCardapio,
+  #ContainerAlunos,
+  #ContainerEsportes,
+  #ContainerBiblio {
+    background-size: cover; /* Garante que ocupe toda a div */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+  }
+}
 #image-carousel {
   width: 75%;
   height: 300px;
-  margin: 2rem auto;
+  margin: 2px auto;
   overflow: hidden;
 }
 
@@ -133,4 +270,10 @@ header {
   -o-object-fit: contain;
      object-fit: contain; /* Garante que a imagem inteira fique visível sem cortar */
   max-height: 100%; /* Evita que a imagem ultrapasse a altura do carousel */
+}
+
+@media (max-width: 321px) {
+  #image-carousel {
+    width: 90%;
+  }
 }/*# sourceMappingURL=styles.css.map */

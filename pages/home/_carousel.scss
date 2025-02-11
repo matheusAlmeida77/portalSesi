@@ -1,7 +1,7 @@
 #image-carousel {
   width: 75%;
   height: 300px;
-  margin: 2rem auto;
+  margin: 2px auto;
   overflow: hidden;
 }
 
@@ -24,4 +24,10 @@
   height: 100%; /* Ocupa toda a altura do slide */
   object-fit: contain; /* Garante que a imagem inteira fique visível sem cortar */
   max-height: 100%; /* Evita que a imagem ultrapasse a altura do carousel */
+}
+
+@media (max-width: 321px) {
+  #image-carousel {
+    width: 90%;
+  }
 }

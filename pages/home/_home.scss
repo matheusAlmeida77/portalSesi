@@ -22,7 +22,6 @@
         font-family: "Inter";
         font-size: 15px;
         font-weight: 400;
-        visibility: hidden;
         color: white;
         cursor: pointer;
     }
@@ -37,3 +36,105 @@
         visibility: visible;
     }
 }
+
+#sectionCards{
+    display: flex;
+    width: 100%;
+    // height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    // align-items: center;
+    // background-color: blue;
+}
+
+.CardHome{
+    margin: 46px 70px;
+    width: 35%;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    color: white;
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.backColorRed{
+    background-color: #76010170;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ContainerCardapio{
+    // background-color: red;
+    background:url('../../src/merendeiras.png');
+    background-size: cover;
+}
+
+#ContainerAlunos {
+    background:url('../../src/alunos.jpg');
+    background-size: cover;
+}
+
+#ContainerEsportes{
+    background:url('../../src/esportes.jpg');
+    background-size: cover;
+}
+
+#ContainerBiblio{
+    background:url('../../src/biblioteca.jpg');
+    background-size: cover;
+}
+
+@media (max-width: 934px) {
+    .CardHome{
+        margin: 46px 40px;
+    }
+
+}
+
+@media (max-width: 861px) {
+    .CardHome{
+        margin: 36px 20px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 667px) {
+    .CardHome{
+        margin: 26px 15px;
+        font-size: 20px;
+        width: 40%;
+    }
+}
+
+@media (max-width: 434px) {
+    .CardHome{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 321px) {
+    .CardHome{
+        font-size: 13px;
+    }
+
+    #ContainerCardapio,
+    #ContainerAlunos,
+    #ContainerEsportes,
+    #ContainerBiblio {
+        background-size: cover; /* Garante que ocupe toda a div */
+        background-position: center center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Evita repetição */
+    }
+}
+
